@@ -31,12 +31,22 @@ root.title("UART Communication")
 
 # Create 5 text entry boxes with a send button beside each
 entries = []
-for i in range(5):
+
+# Manually specify the commands for each entry box
+commands = [
+    "command1",  # Change this to your desired command
+    "command2",  # Change this to your desired command
+    "command3",  # Change this to your desired command
+    "command4",  # Change this to your desired command
+    "command5"   # Change this to your desired command
+]
+
+for command in commands:
     frame = tk.Frame(root)
     frame.pack(pady=2)
 
     entry = tk.Entry(frame, width=40)
-    entry.insert(0, f"command{i + 1}")  # Prefill with "command1" to "command5"
+    entry.insert(0, command)  # Prefill with specified command
     entry.pack(side=tk.LEFT, padx=5)
     entries.append(entry)
 
